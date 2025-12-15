@@ -2,11 +2,12 @@
 
 ## Overview
 This project presents the architecture and implementation of an enterprise-grade
-document scanning and processing platform designed to automate the extraction,
-classification, and processing of business documents.
+document intelligence and automation platform.
 
-The platform was built to support large-scale organizational workflows, combining
-cloud-based data pipelines with AI-powered document intelligence.
+The platform supports multiple document ingestion sources, AI-based document
+processing, structured data modeling, and automated notifications, enabling
+end-to-end document-driven business workflows.
+
 
 ---
 
@@ -45,13 +46,42 @@ The goal of this platform was to:
 ---
 
 ## Data Flow
-1. Documents are ingested from enterprise sources (file storage / APIs)
-2. Azure Data Factory orchestrates the processing flow
-3. Databricks performs data transformations and validations
+1. Documents and metadata are ingested from enterprise sources or external APIs
+2. Azure Data Factory orchestrates the processing lifecycle
+3. Databricks performs data validation, transformation, and enrichment
 4. AI services extract structured data from documents
-5. Results are stored and exposed to downstream systems
+5. Processed data is stored in structured tables aligned with business needs
+6. Logging tables capture process status, errors, and execution metadata
+7. Automation functions trigger notifications or downstream actions
+
 
 ---
+
+## Data Sources & Ingestion Patterns
+The platform was designed to support multiple ingestion sources:
+
+- Network folders and enterprise file storage
+- API-based ingestion from external systems (e.g. Monday.com)
+- Metadata-driven ingestion logic per document type
+
+Example:
+In one project, document data was ingested directly from Monday.com using REST APIs,
+rather than traditional file-based sources, requiring dynamic API handling and
+data normalization.
+
+---
+
+## Automation & Notifications
+As part of the document processing workflow, automated notifications were implemented:
+
+- Azure Functions were used to trigger post-processing actions
+- Integration with Microsoft Graph API for sending emails and notifications
+- Event-driven logic based on document processing status
+
+This enabled real-time feedback and reduced manual follow-ups in document workflows.
+
+---
+
 
 ## Technology Stack
 - **Cloud:** Microsoft Azure  
