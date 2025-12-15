@@ -93,6 +93,13 @@ This enabled real-time feedback and reduced manual follow-ups in document workfl
 
 ---
 
+## Data Modeling & Logging
+- Designed structured data models aligned with business and reporting requirements
+- Implemented logging tables to track document processing status and errors
+- Enabled traceability and operational monitoring across the pipeline
+
+---
+
 ## Key Design Decisions
 - Separation between orchestration (ADF) and processing (Databricks)
 - Scalable, cloud-native architecture
@@ -110,9 +117,11 @@ This enabled real-time feedback and reduced manual follow-ups in document workfl
 
 ## Security Considerations (High-Level)
 - Secure access to cloud resources using managed identities
-- Secrets managed via Azure Key Vault
+- Parameter tables were used for configuration management to reduce operational complexity
+- The architecture included preparation for Azure Key Vault integration, though it was not activated in this phase
 - Controlled access to data and AI services
-- Separation between environments (DEV / TEST / PROD)
+- Separation between environments (DEV / TEST / PROD) at the data and pipeline level
+
 
 ---
 
