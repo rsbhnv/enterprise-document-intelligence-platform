@@ -105,6 +105,8 @@ This enabled real-time feedback and reduced manual follow-ups in document workfl
 - Scalable, cloud-native architecture
 - Modular pipelines to support different document types
 - Emphasis on reliability and maintainability over quick prototypes
+- Deferred Azure Key Vault usage to a later phase to balance security requirements and delivery timelines
+
 
 ---
 
