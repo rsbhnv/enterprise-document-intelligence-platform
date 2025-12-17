@@ -94,13 +94,18 @@ Executed before the ARM deployment and performs the following actions:
 - Validates ARM templates
 
 This approach is typical in enterprise environments.
-
+### 
+![Environment](images/cicd_5_1.png)
+### 
+![Environment](images/cicd_5_2.png)
 ### Post-Deployment Script
 Executed after the ARM deployment:
 - Starts or stops triggers as required
 - Verifies Integration Runtime (IR) availability
 - Validates successful deployment
 - Performs cleanup and restores resources to an operational state
+  ### 
+![Environment](images/cicd_5_3.png)
 ## 6. Release Pipeline – Full Flow
 
 ### Stage 1: TEST
