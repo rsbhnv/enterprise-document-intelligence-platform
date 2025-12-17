@@ -49,8 +49,7 @@ All development activities take place in the DEV environment:
 /factory        → ADF configurations (pipelines, datasets, linked services, etc.)
 /arm_template   → template.json + parameters.json
 
----
-
+```
 
 ## 4. CI/CD Process Overview
 
