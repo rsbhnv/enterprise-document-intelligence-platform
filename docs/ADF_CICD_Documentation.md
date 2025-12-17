@@ -118,7 +118,8 @@ Executed after the ARM deployment:
 ### Stage 2: PROD
 - Same process as TEST
 - **Manual Approval** is recommended before deployment
-
+### 
+![Environment](images/cicd_6.png)
 ## 7. ARM Template Structure
 Publishing from the DEV environment generates the following structure:
 
@@ -154,6 +155,8 @@ After publishing from Azure Data Factory:
   ├── template.json
   └── parameters.json
 ```
+### 
+![Environment](images/cicd_8.png)
 ## 9. End-to-End Process Summary
 
 1. Development in the **DEV** environment (Git connected)
@@ -166,7 +169,8 @@ After publishing from Azure Data Factory:
    - Deploy to **TEST**
    - Deploy to **PROD**
 5. Deployment to **PROD** occurs only after approval (if configured)
-
+### 
+![Environment](images/cicd_9_1.png)
 ## 10. Summary
 
 This document describes a complete CI/CD process for Azure Data Factory using  
