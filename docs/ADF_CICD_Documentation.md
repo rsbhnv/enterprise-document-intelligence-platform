@@ -133,7 +133,7 @@ Deployments are executed using Incremental mode.
 
 ## 8. Repository Structure
 After publishing from Azure Data Factory:
-text
+```text
 /factory
   ├── pipelines/
   ├── dataflows/
@@ -144,7 +144,7 @@ text
 /arm_template
   ├── template.json
   └── parameters.json
-
+```
 ## 9. End-to-End Process Summary
 
 1. Development in the **DEV** environment (Git connected)
