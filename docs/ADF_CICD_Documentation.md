@@ -51,7 +51,6 @@ All development activities take place in the DEV environment:
 
 ---
 
-### ✅ סעיף 4 – בלי טקסט שדלף
 ```markdown
 ## 4. CI/CD Process Overview
 
