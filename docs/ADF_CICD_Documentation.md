@@ -51,7 +51,7 @@ All development activities take place in the DEV environment:
 
 ---
 
-```markdown
+
 ## 4. CI/CD Process Overview
 
 ### Continuous Integration (CI)
