@@ -75,7 +75,10 @@ Both stages are based on:
 - Pre-deployment PowerShell script
 - ARM Deployment
 - Post-deployment PowerShell script
-
+### 
+![Environment](images/cicd_4_1.png)
+### 
+![Environment](images/cicd_4_2.png)
 ## 5. Pre-Deployment & Post-Deployment Scripts (Option 1)
 
 The process is based on the official Microsoft example:  
