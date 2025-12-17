@@ -117,6 +117,7 @@ Publishing from the DEV environment generates the following structure:
 /arm_template
   ├── template.json
   └── parameters.json
+```
 The templates include:
 Pipelines
 Dataflows
