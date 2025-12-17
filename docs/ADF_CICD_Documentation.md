@@ -170,7 +170,7 @@ After publishing from Azure Data Factory:
    - Deploy to **PROD**
 5. Deployment to **PROD** occurs only after approval (if configured)
 ### 
-![Environment](images/cicd_9_1.png)
+![Environment](images/cicd_9.png)
 ## 10. Summary
 
 This document describes a complete CI/CD process for Azure Data Factory using  
