@@ -32,6 +32,7 @@ Only the **DEV** environment is connected to Git (Azure DevOps Repository).
 The **TEST** and **PROD** environments are not Git-connected; updates are applied
 exclusively through the Release Pipeline.
 
+images/cicd_2.png
 ---
 
 ## 3. DEV Environment – Git Enabled
