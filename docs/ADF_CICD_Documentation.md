@@ -44,10 +44,10 @@ All development activities take place in the DEV environment:
 - At the end of development, a **Publish** action is triggered
 - The Publish action automatically generates:
 
+
 ```text
 /factory        → ADF configurations (pipelines, datasets, linked services, etc.)
 /arm_template   → template.json + parameters.json
-
 
 ---
 
@@ -93,12 +93,14 @@ Executed before the ARM deployment and performs the following actions:
 - Validates ARM templates
 
 This approach is typical in enterprise environments.
+
 ### Post-Deployment Script
 Executed after the ARM deployment:
 - Starts or stops triggers as required
 - Verifies Integration Runtime (IR) availability
 - Validates successful deployment
 - Performs cleanup and restores resources to an operational state
+
 
 ## 6. Release Pipeline – Full Flow
 
@@ -113,15 +115,22 @@ Executed after the ARM deployment:
 - Same process as TEST
 - **Manual Approval** is recommended before deployment
 
-## 7. ARM Template Structure
-Publishing from the DEV environment generates the following structure:
-
-```text
-/arm_template
-  ├── template.json
-  └── parameters.json
 The templates include:
-• Pipelines • Dataflows • Datasets • Linked Services • Global Parameters • Triggers • Integration Runtime configuration
+
+Pipelines
+
+Dataflows
+
+Datasets
+
+Linked Services
+
+Global Parameters
+
+Triggers
+
+Integration Runtime configuration
+
 Deployments are executed using Incremental mode.
 
 ## 8. Repository Structure
