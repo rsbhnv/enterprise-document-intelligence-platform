@@ -77,14 +77,60 @@ Both stages are based on:
 - ARM Deployment
 - Post-deployment PowerShell script
 
-## 5. Pre-Deployment & Post-Deployment Scripts (Option 1) The process is based on the official Microsoft example: https://learn.microsoft.com/en-us/azure/data-factory/continuous-integration-delivery-sample-script (PrePostDeploymentScript.Ver2) ### Pre-Deployment Script Executed before the ARM deployment and performs the following actions: - Disconnects Git (FactoryVCS) from non-DEV environments - Updates dynamic parameters - Replaces environment-specific values (connection strings / Key Vault references) - Validates ARM templates This approach is typical in enterprise environments. ### Post-Deployment Script Executed after the ARM deployment: - Starts or stops triggers as required - Verifies Integration Runtime (IR) availability - Validates successful deployment - Performs cleanup and restores resources to an operational state ## 6. Release Pipeline – Full Flow ### Stage 1: TEST - Download artifact from the CI pipeline - Pre-Deployment Script - ARM Deployment - Post-Deployment Script - Trigger activation ### Stage 2: PROD - Same process as TEST - **Manual Approval** is recommended before deployment ## 7. ARM Template Structure Publishing from the DEV environment generates the following structure:
-text
+## 5. Pre-Deployment & Post-Deployment Scripts (Option 1)
+
+The process is based on the official Microsoft example:  
+https://learn.microsoft.com/en-us/azure/data-factory/continuous-integration-delivery-sample-script  
+(`PrePostDeploymentScript.Ver2`)
+
+### Pre-Deployment Script
+Executed before the ARM deployment and performs the following actions:
+- Disconnects Git (FactoryVCS) from non-DEV environments
+- Updates dynamic parameters
+- Replaces environment-specific values  
+  (connection strings / Key Vault references)
+- Validates ARM templates
+
+This approach is typical in enterprise environments.
+
+### Post-Deployment Script
+Executed after the ARM deployment:
+- Starts or stops triggers as required
+- Verifies Integration Runtime (IR) availability
+- Validates successful deployment
+- Performs cleanup and restores resources to an operational state
+## 6. Release Pipeline – Full Flow
+
+### Stage 1: TEST
+- Download artifact from the CI pipeline
+- Pre-Deployment Script
+- ARM Deployment
+- Post-Deployment Script
+- Trigger activation
+
+### Stage 2: PROD
+- Same process as TEST
+- **Manual Approval** is recommended before deployment
+
+## 7. ARM Template Structure
+Publishing from the DEV environment generates the following structure:
+
+```text
 /arm_template
   ├── template.json
   └── parameters.json
 The templates include:
-• Pipelines • Dataflows • Datasets • Linked Services • Global Parameters • Triggers • Integration Runtime configuration
+Pipelines
+Dataflows
+Datasets
+Linked Services
+Global Parameters
+Triggers
+Integration Runtime configuration
+
 Deployments are executed using Incremental mode.
+
+
 
 ## 8. Repository Structure
 After publishing from Azure Data Factory:
