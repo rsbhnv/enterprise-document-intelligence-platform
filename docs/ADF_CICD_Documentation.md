@@ -50,7 +50,8 @@ All development activities take place in the DEV environment:
 /arm_template   → template.json + parameters.json
 
 ```
-
+### 
+![Environment](images/cicd_3.png)
 ## 4. CI/CD Process Overview
 
 ### Continuous Integration (CI)
