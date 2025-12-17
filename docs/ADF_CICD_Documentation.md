@@ -48,6 +48,11 @@ All development activities take place in the DEV environment:
 /factory        → ADF configurations (pipelines, datasets, linked services, etc.)
 /arm_template   → template.json + parameters.json
 
+
+---
+
+### ✅ סעיף 4 – בלי טקסט שדלף
+```markdown
 ## 4. CI/CD Process Overview
 
 ### Continuous Integration (CI)
@@ -71,15 +76,6 @@ Both stages are based on:
 - Pre-deployment PowerShell script
 - ARM Deployment
 - Post-deployment PowerShell script
-
-Executed before the ARM deployment and performs the following actions:
-- Disconnects Git (FactoryVCS) from non-DEV environments
-- Updates dynamic parameters
-- Replaces environment-specific values  
-  (connection strings / Key Vault references)
-- Validates ARM templates
-
-This approach is typical in enterprise environments.
 
 
 ## 5. Pre-Deployment & Post-Deployment Scripts (Option 1)
