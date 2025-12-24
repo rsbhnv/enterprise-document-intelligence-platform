@@ -1,0 +1,18 @@
+# Architecture Overview
+
+The platform follows a modular, cloud-native architecture
+designed for scalability, reliability, and maintainability.
+
+Key principles:
+- Separation of concerns
+- Loose coupling between services
+- Configuration-driven behavior
+- Production-first design
+
+Core layers:
+- Ingestion
+- Orchestration
+- Processing
+- AI extraction
+- Storage
+- Monitoring & automation
