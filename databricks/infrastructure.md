@@ -32,8 +32,6 @@ This separation ensures:
 - Controlled promotion of changes
 - Reduced operational and security risks
 
-> **Screenshot Placeholder:**  
-> Azure Portal – Resource Groups and Databricks Workspaces (DEV vs PROD)
 ![INFRU](screenshots/databricks_infr.png)
 ---
 
@@ -65,9 +63,8 @@ stprod
 ```
 This structure enforces a clear separation between **raw**, **refined**, and **analytics-ready** data.
 
-> **Screenshot Placeholder:**  
-> Azure Storage Account containers (Bronze / Silver / Gold)
-
+![INFRU](screenshots/databricks_infr1.png)
+![INFRU](screenshots/databricks_infr1_1.png)
 ---
 
 ## 3. Unity Catalog – Catalogs and Schemas
@@ -93,8 +90,7 @@ This design provides:
 - Fine-grained access control
 - Clear ownership per layer and environment
 
-> **Screenshot Placeholder:**  
-> Unity Catalog – list of catalogs and schemas
+
 
 ---
 
@@ -135,9 +131,7 @@ Each External Location is explicitly assigned to the relevant Unity Catalog, ens
 - Clear ownership
 - Proper governance across environments
 
-> **Screenshot Placeholder:**  
-> Unity Catalog – External Locations and assigned credentials
-
+![INFRU](screenshots/databricks_infr4.png)
 ---
 
 ## 5. Table Creation – Managed vs External Tables
