@@ -163,3 +163,37 @@ Once External Locations are configured, tables can be created.
 CREATE TABLE dev_bronze.raw_events
 USING delta
 LOCATION 'abfss://bronze@stdev/...';
+```
+Both **Managed Tables** and **External Tables** can be used, depending on governance and lifecycle requirements.
+
+> **Screenshot Placeholder:**  
+> Databricks SQL / Notebook – table creation example
+
+---
+
+## 6. Architecture Summary
+
+The final infrastructure architecture includes:
+
+- Fully isolated **DEV** and **PROD** environments
+- Dedicated Databricks Workspace per environment
+- Separate Storage Accounts per environment
+- **Bronze / Silver / Gold** data layers (Lakehouse architecture)
+- Unity Catalog with environment- and layer-based catalogs
+- Secure access via Credentials and External Locations
+- Combination of Managed and External Delta tables
+
+This setup provides a **scalable, secure, and enterprise-ready** foundation for data platforms built on Azure Databricks.
+
+---
+
+## Notes for Interview Presentation
+
+- Use **masked screenshots only** (no subscription IDs, URLs, or sensitive names)
+- Keep naming generic (**DEV / PROD**)
+- Emphasize:
+  - Environment isolation
+  - Governance with Unity Catalog
+  - Secure storage access
+  - Lakehouse best practices
+
