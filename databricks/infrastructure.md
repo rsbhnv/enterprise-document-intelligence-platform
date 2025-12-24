@@ -185,7 +185,9 @@ WHEN MATCHED THEN
 
 WHEN NOT MATCHED THEN
   INSERT *
-;```
+;
+
+```
 ---
 
 ## 6. Architecture Summary
