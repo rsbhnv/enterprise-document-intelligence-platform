@@ -16,3 +16,6 @@ designed for scalability, reliability, and maintainability.
 - AI extraction
 - Storage
 - Monitoring & automation
+
+Implementation details for each layer are documented
+in the corresponding sections of this repository.
