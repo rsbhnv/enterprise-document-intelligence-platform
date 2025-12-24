@@ -110,7 +110,7 @@ Each execution emits:
 - Error summaries when applicable
 
 Logs are structured and designed for downstream monitoring and auditing.
-
+![Databricks Jobs Overview](screenshots/databricks_development_log.png)
 ---
 
 ## Performance Considerations
@@ -120,7 +120,7 @@ Logs are structured and designed for downstream monitoring and auditing.
 - Large datasets are processed incrementally when possible
 
 Performance optimizations are driven by observed metrics, not assumptions.
-
+![Databricks Jobs Overview](screenshots/databricks_development_performence.png)
 ---
 
 ## Testing & Validation
