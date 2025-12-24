@@ -130,19 +130,6 @@ Performance optimizations are driven by observed metrics, not assumptions.
 
 ---
 
-## Engineering Reference (MERGE / UPSERT Patterns)
-
-The Databricks processing layer in this project applies **MERGE-based UPSERT logic**
-to ensure consistency and idempotent reprocessing for document-based workflows.
-
-The implementation is **document-centric** and does not follow a full CDC methodology.
-
-For a complete, generic CDC/ETL implementation in Databricks,
-see the following reference repository:
-👉 https://github.com/rsbhnv/enterprise-databricks-etl-template
-
-
----
 
 ## Python & Spark – Focused Development Notes
 
