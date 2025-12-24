@@ -36,7 +36,7 @@ Key aspects include:
 
 The integration is designed for **resilience and scale**, not single-document usage.
 
-*(Screenshot examples can be added here)*
+![Python](screenshots/python_api_idl.png)
 
 ---
 
@@ -142,7 +142,7 @@ Key capabilities include:
 This integration complements document extraction
 with context-aware enrichment.
 
-*(Screenshot examples can be added here)*
+![Python](screenshots/python_api_openai.png)
 
 ---
 
