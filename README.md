@@ -1,87 +1,73 @@
 # 📄 Enterprise Document Intelligence Platform
 
 ## Overview
-This project presents the architecture and implementation of an enterprise-grade
-document intelligence and automation platform.
+This repository documents the architecture and implementation of an
+enterprise-grade document intelligence and automation platform.
 
-The platform supports multiple document ingestion sources, AI-based document
-processing, structured data modeling, and automated notifications, enabling
-end-to-end document-driven business workflows.
+The platform enables scalable ingestion, AI-based document extraction,
+data validation and enrichment, and end-to-end automation of
+document-driven business workflows.
 
+The repository focuses on **architecture, orchestration, processing patterns,
+and operational readiness**, rather than proprietary implementation details.
 
 ---
 
 ## Business Context
-Organizations manage large volumes of documents (PDFs, scanned images, structured
-and semi-structured files) that require manual handling and validation.
+Organizations handle large volumes of documents (PDFs, scanned images,
+structured and semi-structured files) that traditionally require
+manual review and validation.
 
-The goal of this platform was to:
+The goals of this platform were to:
 - Reduce manual processing effort
-- Improve data accuracy
-- Enable scalable and auditable document workflows
-- Integrate seamlessly with existing enterprise systems
+- Improve data accuracy and consistency
+- Enable scalable and auditable workflows
+- Integrate with existing enterprise systems
 
 ---
 
 ## My Role
-- End-to-end architecture design
+- End-to-end architecture ownership
 - Technology and tool selection
-- Hands-on development of data pipelines
-- Implementation of cloud data infrastructure
+- Design and implementation of data orchestration pipelines
+- Databricks-based processing logic (Spark / Python)
 - Integration of AI-based document extraction services
-- Collaboration with infrastructure and business stakeholders
+- Collaboration with infrastructure, security, and business stakeholders
 
 ---
 
 ## High-Level Architecture
-**Core Components:**
-- Ingestion layer for incoming documents
-- Data orchestration using Azure Data Factory
-- Processing and transformation using Databricks (Spark)
-- AI-powered document extraction
-- Structured data storage for downstream systems
+**Core components:**
+- Document ingestion layer
+- Orchestration using Azure Data Factory (ADF)
+- Processing and enrichment using Databricks (Spark)
+- AI-powered document extraction services
+- Structured data storage
+- Monitoring, logging, and automation services
 
-*(Architecture diagram can be added here)*
-
----
-
-## Data Flow
-1. Documents and metadata are ingested from enterprise sources or external APIs
-2. Azure Data Factory orchestrates the processing lifecycle
-3. Databricks performs data validation, transformation, and enrichment
-4. AI services extract structured data from documents
-5. Processed data is stored in structured tables aligned with business needs
-6. Logging tables capture process status, errors, and execution metadata
-7. Automation functions trigger notifications or downstream actions
-
+(Architecture diagrams can be added under `/architecture`)
 
 ---
 
-## Data Sources & Ingestion Patterns
-The platform was designed to support multiple ingestion sources:
-
-- Network folders and enterprise file storage
-- API-based ingestion from external systems (e.g. Monday.com)
-- Metadata-driven ingestion logic per document type
-
-Example:
-In one project, document data was ingested directly from Monday.com using REST APIs,
-rather than traditional file-based sources, requiring dynamic API handling and
-data normalization.
+## Repository Structure
+- `architecture/` – System architecture, data flow, security
+- `adf/` – Azure Data Factory design, development, infrastructure, CI/CD
+- `databricks/` – Databricks infrastructure, development, secrets, code references
+- `ai-services/` – Document Intelligence and GenAI processing
+- `monitoring/` – Observability and operational monitoring
 
 ---
 
-## Automation & Notifications
-As part of the document processing workflow, automated notifications were implemented:
-
-- Azure Functions were used to trigger post-processing actions
-- Integration with Microsoft Graph API for sending emails and notifications
-- Event-driven logic based on document processing status
-
-This enabled real-time feedback and reduced manual follow-ups in document workflows.
+## Data Flow (Summary)
+1. Documents and metadata are ingested from enterprise sources or APIs
+2. ADF orchestrates the end-to-end processing lifecycle
+3. Databricks validates, transforms, and enriches extracted data
+4. AI services extract structured information from documents
+5. Data is stored in structured tables aligned with business models
+6. Logging tables capture execution status, errors, and metrics
+7. Automation triggers notifications or downstream actions
 
 ---
-
 
 ## Technology Stack
 - **Cloud:** Microsoft Azure  
@@ -89,54 +75,35 @@ This enabled real-time feedback and reduced manual follow-ups in document workfl
 - **Processing:** Databricks, Apache Spark  
 - **AI Services:** Azure Document Intelligence, Azure OpenAI  
 - **Programming:** Python  
-- **Data Storage:** SQL-based enterprise systems  
-
----
-
-## Data Modeling & Logging
-- Designed structured data models aligned with business and reporting requirements
-- Implemented logging tables to track document processing status and errors
-- Enabled traceability and operational monitoring across the pipeline
-
----
-
-## Key Design Decisions
-- Separation between orchestration (ADF) and processing (Databricks)
-- Scalable, cloud-native architecture
-- Modular pipelines to support different document types
-- Emphasis on reliability and maintainability over quick prototypes
-- Deferred Azure Key Vault usage to a later phase to balance security requirements and delivery timelines
-
+- **Storage:** SQL-based enterprise data stores  
 
 ---
 
 ## CI/CD & Environments
-- CI/CD pipelines were designed and implemented for DEV and TEST environments
-- Automated validation and testing were performed
-- Production rollout was planned but postponed due to organizational time constraints
+- CI/CD pipelines designed for DEV and TEST
+- Parameterized deployments
+- Production rollout planned but postponed due to organizational constraints
 
 ---
 
-## Security Considerations (High-Level)
-- Secure access to cloud resources using managed identities
-- Parameter tables were used for configuration management to reduce operational complexity
-- The architecture included preparation for Azure Key Vault integration, though it was not activated in this phase
-- Controlled access to data and AI services
-- Separation between environments (DEV / TEST / PROD) at the data and pipeline level
-
+## Security (High-Level)
+- Managed identities for secure access
+- Environment separation (DEV / TEST / PROD)
+- Configuration-driven pipelines
+- Key Vault integration prepared and documented (not activated in this phase)
 
 ---
 
 ## Limitations & Future Improvements
-- Extended CI/CD to full production lifecycle
-- Enhanced monitoring and observability
-- Advanced document classification models
-- Improved exception handling and human-in-the-loop workflows
+- Full CI/CD production lifecycle
+- Enhanced observability and alerting
+- Advanced document classification
+- Human-in-the-loop exception handling
 
 ---
 
 ## Lessons Learned
-- Designing document intelligence systems requires strong data foundations
-- Cloud-native orchestration enables flexibility and scalability
-- AI services must be tightly integrated with data quality processes
-- Early architectural decisions significantly impact production readiness
+- Document intelligence requires strong data engineering foundations
+- Clear separation between orchestration and processing is critical
+- AI must be tightly coupled with data quality controls
+- Early architectural decisions heavily influence production readiness
