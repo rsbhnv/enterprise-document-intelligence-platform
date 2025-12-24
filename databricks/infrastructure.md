@@ -62,3 +62,98 @@ stprod
  ├─ bronze
  ├─ silver
  └─ gold
+This structure enforces a clear separation between raw, refined, and analytics-ready data.
+
+Screenshot Placeholder:
+Azure Storage Account containers (Bronze / Silver / Gold)
+
+3. Unity Catalog – Catalogs and Schemas
+
+Separate Unity Catalog catalogs were created per environment and data layer:
+
+dev_bronze
+
+dev_silver
+
+dev_gold
+
+prod_bronze
+
+prod_silver
+
+prod_gold
+
+Within each catalog, schemas are created based on project needs, for example:
+
+raw
+
+curated
+
+analytics
+
+This design provides:
+
+Strong governance
+
+Fine-grained access control
+
+Clear ownership per layer and environment
+
+Screenshot Placeholder:
+Unity Catalog – list of catalogs and schemas
+
+4. Credentials & External Locations
+
+To allow Databricks to securely access the Storage Accounts, the following steps were performed:
+
+4.1 Create Credentials
+
+Credentials were created using one of the following approaches:
+
+Azure role-based access (recommended)
+
+Storage access key (when required)
+
+Permissions were scoped only to the required containers, following the principle of least privilege.
+
+4.2 Create External Locations
+
+External Locations were created and mapped to each data layer:
+
+dev_bronze_loc → stdev/bronze
+
+dev_silver_loc → stdev/silver
+
+dev_gold_loc → stdev/gold
+
+The same pattern applies to PROD.
+
+4.3 Associate External Locations with Catalogs
+
+Each External Location is explicitly assigned to the relevant Unity Catalog, ensuring:
+
+Controlled access
+
+Clear ownership
+
+Proper governance across environments
+
+Screenshot Placeholder:
+Unity Catalog – External Locations and assigned credentials
+
+5. Table Creation – Managed vs External Tables
+
+Once External Locations are configured, tables can be created.
+
+Data Layer Responsibilities
+
+Bronze tables
+Raw ingestion, minimal transformation
+
+Silver tables
+Cleaned and standardized data after basic transformations
+
+Gold tables
+Curated, analytics-ready datasets
+
+Example Table Definition
