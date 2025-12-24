@@ -22,8 +22,7 @@ Azure Key Vault provides:
 
 Databricks consumes Key Vault secrets through **Databricks Secret Scopes**, enabling secure access to external services and Linked Services without hardcoding credentials.
 
-> **Screenshot Placeholder:**  
-> Add a screenshot of the Key Vault overview page in Azure Portal.
+![Azure Azure Key Vault](screenshots/keyvault0.png)
 
 ---
 
