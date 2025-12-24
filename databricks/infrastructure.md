@@ -34,7 +34,7 @@ This separation ensures:
 
 > **Screenshot Placeholder:**  
 > Azure Portal – Resource Groups and Databricks Workspaces (DEV vs PROD)
-
+![INFRU](screenshots/keyvault1.png)
 ---
 
 ## 2. Storage Accounts per Environment
