@@ -51,10 +51,10 @@ well-defined activity patterns:
 
 - **Web Activities**  
   Used to invoke external APIs (e.g., Document Intelligence, OpenAI).
-
+ ![ADF](screenshots/ADF_development_function.png)
 - **Databricks Notebook Activities**  
   Trigger Spark-based processing and enrichment logic.
-
+![ADF](screenshots/ADF_development_databricks.png)
 - **Azure Function Activities**  
   Used for tasks not natively supported by ADF
   (e.g., sending notifications, custom integrations).
