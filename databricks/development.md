@@ -144,6 +144,30 @@ That repository demonstrates:
 The Document Intelligence platform applies the same principles,
 adapted to document-based ingestion workflows.
 
+
+---
+
+## Python & Spark – Focused Development Notes
+
+The Databricks development layer relies on a focused subset of
+Python and Spark capabilities that are relevant for
+enterprise-scale, production-grade data processing.
+
+To avoid duplicating generic documentation, detailed notes are maintained separately:
+
+- 📘 **Python Development Notes**  
+  Patterns used for configuration-driven logic, error handling,
+  logging, and reusable utilities:  
+  👉 [python-notes.md](python-notes.md)
+
+- ⚡ **Spark Development Notes**  
+  Schema enforcement, Delta Lake usage, merge patterns,
+  partitioning considerations, and performance awareness:  
+  👉 [spark-notes.md](spark-notes.md)
+
+These documents complement this development guide
+and provide deeper technical context where required.
+
 ---
 
 ## Summary
