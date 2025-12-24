@@ -129,20 +129,16 @@ Performance optimizations are driven by observed metrics, not assumptions.
 
 ---
 
-## Reusable Reference Implementation
-The Databricks processing layer follows **generic, production-grade ETL/CDC patterns**.
+## Engineering Reference (MERGE / UPSERT Patterns)
 
-A reusable and standalone reference implementation is available here:
+The Databricks processing layer in this project applies **MERGE-based UPSERT logic**
+to ensure consistency and idempotent reprocessing for document-based workflows.
 
+The implementation is **document-centric** and does not follow a full CDC methodology.
+
+For a complete, generic CDC/ETL implementation in Databricks,
+see the following reference repository:
 👉 https://github.com/rsbhnv/enterprise-databricks-etl-template
-
-That repository demonstrates:
-- Config-driven ingestion
-- Delta Lake merge strategies
-- Monitoring and operational best practices
-
-The Document Intelligence platform applies the same principles,
-adapted to document-based ingestion workflows.
 
 
 ---
