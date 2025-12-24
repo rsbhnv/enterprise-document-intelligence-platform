@@ -163,12 +163,35 @@ Once External Locations are configured, tables can be created.
 CREATE TABLE dev_bronze.raw_events
 USING delta
 LOCATION 'abfss://bronze@stdev/...';
+
+
 ```
 Both **Managed Tables** and **External Tables** can be used, depending on governance and lifecycle requirements.
 
-> **Screenshot Placeholder:**  
-> Databricks SQL / Notebook – table creation example
 
+```
+UPDATE dev_silver.cleaned_events
+SET source_system = 'UNKNOWN'
+WHERE source_system IS NULL;
+
+UPDATE dev_silver.cleaned_events
+SET source_system = ref.system_name
+FROM dev_silver.system_reference ref
+WHERE cleaned_events.event_id = ref.event_id;
+
+MERGE INTO dev_silver.customers t
+USING dev_bronze.customers_staging s
+ON t.customer_id = s.customer_id
+
+WHEN MATCHED THEN
+  UPDATE SET
+    t.name        = s.name,
+    t.email       = s.email,
+    t.country     = s.country
+
+WHEN NOT MATCHED THEN
+  INSERT *
+;```
 ---
 
 ## 6. Architecture Summary
