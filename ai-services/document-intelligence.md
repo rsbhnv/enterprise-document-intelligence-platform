@@ -97,3 +97,43 @@ while True:
 
 analyze_result = result["analyzeResult"]
 
+------------------
+
+import requests, json, time, base64, os
+import urllib.parse
+
+def analyze_document_url_documentintelligence(fileurl,params,url):
+    #url = params['endpoint_idl'] + 'documentintelligence/documentModels/'+params['model_idl']+':analyze?api-version='+params['version_idl']
+    print(url)
+    headers = {
+        'Content-Type': 'application/json',
+        'Ocp-Apim-Subscription-Key': params['api_key_idl']
+    } 
+    data = '{"urlSource": "%s" }' % fileurl
+    print (data)
+    response = requests.post(url, headers=headers, data=data)
+    print (response)
+    return response.headers['Operation-Location']
+
+def get_aadi_results(url,params):
+    headers = {
+        'Content-Type': 'application/json',
+        'Ocp-Apim-Subscription-Key': params['api_key_idl']
+    }
+    try_again = True
+    while True:
+        response = requests.get(url, headers=headers)
+        if response.status_code > 299:
+            return
+
+        json_response = json.loads(response.content)
+        if json_response["status"] == "succeeded":
+            return json_response["analyzeResult"]
+        elif json_response["status"] == "running":
+            time.sleep(.5)
+        else:
+            return
+			
+```			
+			
+			
