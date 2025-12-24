@@ -163,8 +163,6 @@ Once External Locations are configured, tables can be created.
 CREATE TABLE dev_bronze.raw_events
 USING delta
 LOCATION 'abfss://bronze@stdev/...';
-
-
 ```
 Both **Managed Tables** and **External Tables** can be used, depending on governance and lifecycle requirements.
 
@@ -174,10 +172,6 @@ UPDATE dev_silver.cleaned_events
 SET source_system = 'UNKNOWN'
 WHERE source_system IS NULL;
 
-UPDATE dev_silver.cleaned_events
-SET source_system = ref.system_name
-FROM dev_silver.system_reference ref
-WHERE cleaned_events.event_id = ref.event_id;
 
 MERGE INTO dev_silver.customers t
 USING dev_bronze.customers_staging s
