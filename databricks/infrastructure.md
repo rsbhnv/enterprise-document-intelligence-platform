@@ -62,6 +62,7 @@ stprod
  ├─ bronze
  ├─ silver
  └─ gold
+```
 This structure enforces a clear separation between **raw**, **refined**, and **analytics-ready** data.
 
 > **Screenshot Placeholder:**  
