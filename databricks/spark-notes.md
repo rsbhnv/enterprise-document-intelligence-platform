@@ -45,7 +45,7 @@ Common patterns include:
 
 These patterns support retries and operational stability.
 
-*(Screenshot examples can be added here)*
+![Spark](screenshots/spark2.png)
 
 ---
 
