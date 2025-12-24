@@ -24,7 +24,7 @@ Those responsibilities are delegated to downstream components
 ---
 
 ## Pipeline Design Principles
-
+![ADF](screenshots/ADF_development_pipline.png)
 ### Parameterized Pipelines
 - Pipelines are designed to be reusable and parameter-driven
 - Runtime behavior is controlled via parameters and metadata
