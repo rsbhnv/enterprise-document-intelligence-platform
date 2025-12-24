@@ -20,8 +20,8 @@ The following steps outline the standard workflow used in this platform.
 Navigate to the Azure Portal and open the **Document Intelligence** resource
 (previously known as Form Recognizer).
 
-![Azure Document Intelligence Resource](./screenshots/di_resource_overview1.png)
-![Azure Document Intelligence Resource](./screenshots/di_resource_overview2.png)
+![Azure Document Intelligence Resource](screenshots/di_resource_overview1.png)
+![Azure Document Intelligence Resource](screenshots/di_resource_overview2.png)
 
 ---
 
@@ -33,8 +33,8 @@ From the resource menu:
 - Choose **Custom extraction model**
 - Upload sample documents for training
 
-![Create Custom Model](./screenshots/di_create_model1.png)
-![Create Custom Model](./screenshots/di_create_model2.png)
+![Create Custom Model](screenshots/di_create_model1.png)
+![Create Custom Model](screenshots/di_create_model2.png)
 
 ---
 
@@ -45,8 +45,8 @@ After labeling (if required) and training:
 - Publish the model
 - Copy the **Model ID** for API usage
 
-![Model Training & Publish](./screenshots/di_model_training1.png)
-![Model Training & Publish](./screenshots/di_resource_overview0.png)
+![Model Training & Publish](screenshots/di_model_training1.png)
+![Model Training & Publish](screenshots/di_resource_overview0.png)
 
 > 📌 The published Model ID is later injected into Databricks jobs via configuration tables.
 
