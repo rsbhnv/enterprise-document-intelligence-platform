@@ -72,8 +72,15 @@ Typical configuration use cases:
 
 This enables flexible behavior without code changes
 and supports reuse across document types and environments.
-
-*(Screenshot examples can be added here)*
+```
+Document Type
+     ↓
+Config Table
+     ↓
+Processing Logic
+     ↓
+Target Table
+```
 
 ---
 
