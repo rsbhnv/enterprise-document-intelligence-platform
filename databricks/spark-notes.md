@@ -30,7 +30,7 @@ Typical usage patterns:
 
 This hybrid approach improves readability and maintainability.
 
-*(Screenshot examples can be added here)*
+![Spark](screenshots/spark1.png)
 
 ---
 
