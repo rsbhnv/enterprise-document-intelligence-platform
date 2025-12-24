@@ -19,8 +19,8 @@ Its responsibilities include:
 - Centralized logging and metrics emission
 
 Databricks is intentionally decoupled from orchestration, which is handled by Azure Data Factory (ADF).
-![Databricks Jobs Overview](images/databricks_development_runjob.png)
-![Databricks Jobs Overview](images/databricks_development_adf.png)
+![Databricks Jobs Overview](screenshots/databricks_development_runjob.png)
+![Databricks Jobs Overview](screenshots/databricks_development_adf.png)
 ---
 
 ## Development Principles
