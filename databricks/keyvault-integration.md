@@ -21,8 +21,8 @@ Azure Key Vault provides:
 - Alignment with security best practices
 
 Databricks consumes Key Vault secrets through **Databricks Secret Scopes**, enabling secure access to external services and Linked Services without hardcoding credentials.
+![Azure Azure Key Vault](screenshots/keyvault1.png)
 
-![Azure Azure Key Vault](screenshots/keyvault00.png)
 
 ---
 
@@ -36,8 +36,7 @@ When creating a Key Vault, define:
 - Azure **Region**
 - **Pricing Tier** (commonly *Standard*)
 
-> **Screenshot Placeholder:**  
-> Key Vault creation (basics) + the final Key Vault resource overview.
+![Azure Azure Key Vault](screenshots/keyvault00.png)
 
 ---
 
@@ -55,8 +54,6 @@ Common RBAC roles:
 - **Key Vault Secrets Officer** – manage secrets
 - **Key Vault Administrator** – full administrative access
 
-> **Screenshot Placeholder:**  
-> RBAC role assignments for Key Vault (who has what access).
 
 ---
 
@@ -70,8 +67,7 @@ Typical secrets stored in Key Vault:
 - OpenAI API key
 - On-premises connectivity credentials (if required)
 
-> **Screenshot Placeholder:**  
-> Secrets list in Key Vault (keys masked, no sensitive data visible).
+![Azure Azure Key Vault](screenshots/keyvault4.png)
 
 ---
 
@@ -87,8 +83,7 @@ Benefits:
 - Strong authentication through Azure AD
 - Easier governance and auditing
 
-> **Screenshot Placeholder:**  
-> Managed Identity enabled on a service + its Key Vault RBAC assignment.
+
 
 ---
 
@@ -105,8 +100,6 @@ For other Linked Services, use:
 
 This prevents credentials from being embedded in pipeline or Linked Service definitions.
 
-> **Screenshot Placeholder:**  
-> ADF Key Vault Linked Service configuration (authentication via Managed Identity).
 
 ---
 
@@ -122,13 +115,11 @@ Create a Secret Scope of type **Azure Key Vault–backed**, including:
 - Key Vault reference
 - Ensure the Databricks workspace supports the required plan (Standard / Premium)
 
-> **Screenshot Placeholder:**  
-> Scope creation or UI/CLI output showing the created scope (no secrets displayed).
-
+![Azure Azure Key Vault](screenshots/keyvault2.png)
 ---
 
 ### 4.2 Use Secrets Inside Notebooks
-
+![Azure Azure Key Vault](screenshots/keyvault3.png)
 Example:
 
 ```python
