@@ -28,7 +28,7 @@ Add one screenshot showing multiple ADF instances
 
 ```text
 [ Screenshot: Azure Data Factory instances – DEV / TEST / PROD ]
-
+```
 
 ## Core Infrastructure Components
 
@@ -60,7 +60,7 @@ Add one screenshot showing the container structure only
 
 ```text
 [ Screenshot: Storage containers – landing / raw / processed / archive ]
-
+```
 ### Integration with Databricks
 
 - Dedicated Linked Service per environment
@@ -99,7 +99,7 @@ Add one screenshot showing IR types and status only.
 
 ```text
 [ Screenshot: Integration Runtime – Azure & Self-Hosted ]
-
+```
 ### Linked Services & Datasets
 
 ADF Linked Services are defined for:
@@ -139,7 +139,7 @@ Add one screenshot of a pipeline canvas
 
 ```text
 [ Screenshot: ADF pipeline – high-level flow ]
-
+```
 ### Triggers
 
 The solution supports multiple trigger types:
@@ -168,7 +168,7 @@ Add one screenshot showing failed and successful runs
 
 ```text
 [ Screenshot: ADF monitoring and alerts ]
-
+```
 ### Supporting Components
 
 Additional supporting components include:
