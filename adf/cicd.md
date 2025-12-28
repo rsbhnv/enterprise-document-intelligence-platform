@@ -33,7 +33,7 @@ The **TEST** and **PROD** environments are not Git-connected; updates are applie
 exclusively through the Release Pipeline.
 
 ### 
-![Environment](images/cicd_2.png)
+![Environment](screenshots/cicd_2.png)
 ---
 
 ## 3. DEV Environment – Git Enabled
@@ -51,7 +51,7 @@ All development activities take place in the DEV environment:
 
 ```
 ### 
-![Environment](images/cicd_3.png)
+![Environment](screenshots/cicd_3.png)
 ## 4. CI/CD Process Overview
 
 ### Continuous Integration (CI)
@@ -76,9 +76,9 @@ Both stages are based on:
 - ARM Deployment
 - Post-deployment PowerShell script
 ### 
-![Environment](images/cicd_4_1.png)
+![Environment](screenshots/cicd_4_1.png)
 ### 
-![Environment](images/cicd_4_2.png)
+![Environment](screenshots/cicd_4_2.png)
 ## 5. Pre-Deployment & Post-Deployment Scripts (Option 1)
 
 The process is based on the official Microsoft example:  
@@ -95,9 +95,9 @@ Executed before the ARM deployment and performs the following actions:
 
 This approach is typical in enterprise environments.
 ### 
-![Environment](images/cicd_5_1.png)
+![Environment](screenshots/cicd_5_1.png)
 ### 
-![Environment](images/cicd_5_2.png)
+![Environment](screenshots/cicd_5_2.png)
 ### Post-Deployment Script
 Executed after the ARM deployment:
 - Starts or stops triggers as required
@@ -105,7 +105,7 @@ Executed after the ARM deployment:
 - Validates successful deployment
 - Performs cleanup and restores resources to an operational state
   ### 
-![Environment](images/cicd_5_3.png)
+![Environment](screenshots/cicd_5_3.png)
 ## 6. Release Pipeline – Full Flow
 
 ### Stage 1: TEST
@@ -119,7 +119,7 @@ Executed after the ARM deployment:
 - Same process as TEST
 - **Manual Approval** is recommended before deployment
 ### 
-![Environment](images/cicd_6.png)
+![Environment](screenshots/cicd_6.png)
 ## 7. ARM Template Structure
 Publishing from the DEV environment generates the following structure:
 
@@ -156,7 +156,7 @@ After publishing from Azure Data Factory:
   └── parameters.json
 ```
 ### 
-![Environment](images/cicd_8.png)
+![Environment](screenshots/cicd_8.png)
 ## 9. End-to-End Process Summary
 
 1. Development in the **DEV** environment (Git connected)
@@ -170,7 +170,7 @@ After publishing from Azure Data Factory:
    - Deploy to **PROD**
 5. Deployment to **PROD** occurs only after approval (if configured)
 ### 
-![Environment](images/cicd_9.png)
+![Environment](screenshots/cicd_9.png)
 ## 10. Summary
 
 This document describes a complete CI/CD process for Azure Data Factory using  
