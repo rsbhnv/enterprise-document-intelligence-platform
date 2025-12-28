@@ -110,7 +110,7 @@ including:
 - CSV
 - PDF
 - SQL-based sources
-
+![ADF_infru](screenshots/adf_infr_ls.png)
 ---
 
 ### Pipelines (High-Level)
@@ -128,13 +128,7 @@ Typical pipeline responsibilities include:
 Pipeline logic is parameterized
 and environment-aware.
 
-#### Screenshot – Pipeline Overview
-Add one screenshot of a pipeline canvas  
-(high-level, zoomed out).
 
-```text
-[ Screenshot: ADF pipeline – high-level flow ]
-```
 ### Triggers
 
 The solution supports multiple trigger types:
