@@ -112,7 +112,7 @@ including:
 - SQL-based sources
 
 
-![ADF_infru](screenshots/adf_infr_ls.png)
+![ADF_infru](screenshots/adf_infr_ls1.png)
 
 
 ---
