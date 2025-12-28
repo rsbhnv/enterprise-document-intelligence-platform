@@ -110,7 +110,11 @@ including:
 - CSV
 - PDF
 - SQL-based sources
+
+
 ![ADF_infru](screenshots/adf_infr_ls.png)
+
+
 ---
 
 ### Pipelines (High-Level)
