@@ -36,19 +36,9 @@ Azure OpenAI enables:
 - Secure API-based invocation from processing layers
 - Alignment with organizational compliance requirements
 
-#### Screenshot – Azure OpenAI Resource
-Add one screenshot showing the Azure OpenAI resource overview
-or deployed models list.
+![Azure OPENAI](screenshots/ai-services_openai.png)
 
-Do **not** include:
-- API keys
-- Full endpoint URLs
-- Prompt content
-- Business-specific identifiers
-
-```text
-[ Screenshot: Azure OpenAI – resource overview / model deployments ]
-
+![Azure OPENAI](screenshots/ai-services_openai1.png)
 
 ### Integration Characteristics
 
