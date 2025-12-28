@@ -91,8 +91,7 @@ Two integration runtime models are supported:
 - Secure communication with internal systems
 - Runtime health and availability monitored centrally
 
-#### Screenshot – Integration Runtime
-Add one screenshot showing IR types and status only.
+![ADF_infru](screenshots/adf_infr_runtime.png)
 
 
 
@@ -162,9 +161,8 @@ and faster incident response.
 Add one screenshot showing failed and successful runs  
 (no pipeline names or sensitive details).
 
-```text
-[ Screenshot: ADF monitoring and alerts ]
-```
+![ADF_infru](screenshots/adf_infr_monitor_alert.png)
+
 ### Supporting Components
 
 Additional supporting components include:
