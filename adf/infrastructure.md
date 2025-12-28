@@ -26,9 +26,7 @@ with environment-specific configuration and access control.
 Add one screenshot showing multiple ADF instances
 (DEV / TEST / PROD), without subscription or tenant details.
 
-```text
-[ Screenshot: Azure Data Factory instances – DEV / TEST / PROD ]
-```
+![ADF_infru](screenshots/adf_infr_instances.png)
 
 ## Core Infrastructure Components
 
@@ -58,9 +56,8 @@ Access to storage resources is controlled via **RBAC**.
 Add one screenshot showing the container structure only  
 (no file names or actual data).
 
-```text
-[ Screenshot: Storage containers – landing / raw / processed / archive ]
-```
+![ADF_infru](screenshots/adf_infr_storage.png)
+
 ### Integration with Databricks
 
 - Dedicated Linked Service per environment
@@ -97,9 +94,8 @@ Two integration runtime models are supported:
 #### Screenshot – Integration Runtime
 Add one screenshot showing IR types and status only.
 
-```text
-[ Screenshot: Integration Runtime – Azure & Self-Hosted ]
-```
+
+
 ### Linked Services & Datasets
 
 ADF Linked Services are defined for:
