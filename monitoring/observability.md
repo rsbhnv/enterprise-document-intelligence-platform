@@ -4,4 +4,5 @@
 - Error categorization
 - Runtime metrics
 - Auditability per document
-- Foundation for alerts and SLA monitoring
+- Enables monitoring of processing times and system availability
+
