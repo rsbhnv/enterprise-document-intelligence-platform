@@ -13,6 +13,20 @@ and operational readiness**, rather than proprietary implementation details.
 
 ---
 
+## Table of Contents
+- [Business Context](#business-context)
+- [My Role](#my-role)
+- [High-Level Architecture](#high-level-architecture)
+- [Repository Structure](#repository-structure)
+- [Data Flow (Summary)](#data-flow-summary)
+- [Technology Stack](#technology-stack)
+- [CI/CD & Environments](#cicd--environments)
+- [Security (High-Level)](#security-high-level)
+- [Limitations & Future Improvements](#limitations--future-improvements)
+- [Lessons Learned](#lessons-learned)
+
+---
+
 ## Business Context
 Organizations handle large volumes of documents (PDFs, scanned images,
 structured and semi-structured files) that traditionally require
@@ -45,16 +59,44 @@ The goals of this platform were to:
 - Structured data storage
 - Monitoring, logging, and automation services
 
-(Architecture diagrams can be added under `/architecture`)
+📐 Architecture documentation:
+- [`architecture/overview.md`](architecture/overview.md)
+- [`architecture/data-flow.md`](architecture/data-flow.md)
+- [`architecture/security-and-governance.md`](architecture/security-and-governance.md)
 
 ---
 
 ## Repository Structure
-- `architecture/` – System architecture, data flow, security
-- `adf/` – Azure Data Factory design, development, infrastructure, CI/CD
-- `databricks/` – Databricks infrastructure, development, secrets, code references
-- `ai-services/` – Document Intelligence and GenAI processing
-- `monitoring/` – Observability and operational monitoring
+
+### Architecture
+System-level design, data flow, and governance:
+- [`architecture/overview.md`](architecture/overview.md)
+- [`architecture/data-flow.md`](architecture/data-flow.md)
+- [`architecture/security-and-governance.md`](architecture/security-and-governance.md)
+
+### Azure Data Factory (ADF)
+Orchestration, infrastructure, and lifecycle management:
+- [`adf/README.md`](adf/README.md)
+- [`adf/infrastructure.md`](adf/infrastructure.md)
+- [`adf/development.md`](adf/development.md)
+- [`adf/cicd.md`](adf/cicd.md)
+
+### Databricks
+Processing layer architecture and development practices:
+- [`databricks/README.md`](databricks/README.md)
+- [`databricks/infrastructure.md`](databricks/infrastructure.md)
+- [`databricks/development.md`](databricks/development.md)
+- [`databricks/keyvault-integration.md`](databricks/keyvault-integration.md)
+- [`databricks/code-reference.md`](databricks/code-reference.md)
+
+### AI Services
+AI-based document extraction and GenAI enrichment:
+- [`ai-services/document-intelligence.md`](ai-services/document-intelligence.md)
+- [`ai-services/genai-processing.md`](ai-services/genai-processing.md)
+
+### Monitoring & Observability
+Operational monitoring and logging:
+- [`monitoring/observability.md`](monitoring/observability.md)
 
 ---
 
@@ -66,6 +108,9 @@ The goals of this platform were to:
 5. Data is stored in structured tables aligned with business models
 6. Logging tables capture execution status, errors, and metrics
 7. Automation triggers notifications or downstream actions
+
+🔎 Detailed flow:
+- [`architecture/data-flow.md`](architecture/data-flow.md)
 
 ---
 
@@ -84,6 +129,9 @@ The goals of this platform were to:
 - Parameterized deployments
 - Production rollout planned but postponed due to organizational constraints
 
+📦 CI/CD details:
+- [`adf/cicd.md`](adf/cicd.md)
+
 ---
 
 ## Security (High-Level)
@@ -91,6 +139,9 @@ The goals of this platform were to:
 - Environment separation (DEV / TEST / PROD)
 - Configuration-driven pipelines
 - Key Vault integration prepared and documented (not activated in this phase)
+
+🔐 Governance and security details:
+- [`architecture/security-and-governance.md`](architecture/security-and-governance.md)
 
 ---
 
