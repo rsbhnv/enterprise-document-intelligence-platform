@@ -54,7 +54,7 @@ well-defined activity patterns:
  ![ADF](screenshots/ADF_development_function.png)
 - **Databricks Notebook Activities**  
   Trigger Spark-based processing and enrichment logic.
-![ADF](screenshots/ADF_development_databricks.png)
+![ADF](screenshots/ADF_development_databricks_V1.png)
 - **Azure Function Activities**  
   Used for tasks not natively supported by ADF
   (e.g., sending notifications, custom integrations).
