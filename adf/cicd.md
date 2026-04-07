@@ -33,7 +33,7 @@ The **TEST** and **PROD** environments are not Git-connected; updates are applie
 exclusively through the Release Pipeline.
 
 ### 
-![Environment](screenshots/cicd_2.png)
+![Environment](screenshots/cicd_2_V1.png)
 ---
 
 ## 3. DEV Environment – Git Enabled
