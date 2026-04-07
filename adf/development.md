@@ -106,7 +106,7 @@ ADF development is aligned with operational monitoring needs.
 ADF’s built-in monitoring is complemented by
 external logging and alerting mechanisms.
 ![ADF](screenshots/ADF_development_monitor1.png)
-![ADF](screenshots/ADF_development_monitor2.png)
+![ADF](screenshots/ADF_development_monitor2_V1.png)
 ---
 
 ## What Is Intentionally Abstracted
